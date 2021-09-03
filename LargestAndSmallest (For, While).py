@@ -1,18 +1,21 @@
-largest = - 1
+                        # Thats a program to receive a random amount of numbers from a user and print out the smallst and largest between those numbers
+
+
+largest = - 1                                                     # Just variables
 smallest = None
+numbers = None
 
-
-while True:
-    inumbers = input("Enter a number/done: ")
-    if inumbers == "done":
+while True:                                                       # A while to keep receiving the amount of the numbers that the user wants
+    inumbers = input('Enter a number/done: ')                     # Receive the numbers and the word ('done') to stop the user from inserting numbers
+    if inumbers == 'done':                                        
         break
-    try:
-        numbers = float(inumbers)
-    except:
+    try:                                                          # 'Try' and 'except' to make sure that the user is inserting only numbers
+        numbers = float(inumbers)                                 # If the user inserts something that isn't a number the program will show the message -
+    except:                                                       # 'Invalid input' until a valid number is inserted
         print('Invalid input')
         
 
-    for number in [numbers]:
+    for number in [numbers]:                                      # 'For' loop to check which of the numbers are the largest and smallest
         if number > largest :
             largest = number
     
@@ -22,5 +25,5 @@ while True:
         elif number < smallest:
             smallest = number
 
-print('Maximum is', largest)
-print('Minimum is', smallest)
+print('Maximum is', largest)                                      # Print out the largest and smallest number that has been inserted
+print('Minimum is', smallest)                                     
